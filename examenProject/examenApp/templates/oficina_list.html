@@ -5,17 +5,17 @@
         <th>ID</th>
         <th>ciudad</th>
         <th>calle</th>
-       
+
     </tr>
-{% if oficina_list %}
-{% for c in oficina_list %}
+    {% if oficina_list %}
+    {% for c in oficina_list %}
     <tr>
         <td>{{c.id}}</td>
         <td><a href="{% url 'detalle' c.id %}">{{c.ciudad}}</a></td>
         <td>{{c.calle}}</td>
     </tr>
-{% endfor %}
-{% endif %}
+    {% endfor %}
+    {% endif %}
 </table>
 
 {% endblock %}
